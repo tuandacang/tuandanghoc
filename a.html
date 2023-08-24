@@ -1,96 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Vũ Tuấn Anh 2121050396</title>
-<style>
-table, th, td{
-    border: 2px solid burlywood;
-    background-color: rgb(107, 194, 102);
-    
-}
-.main{
-    float: none;
-    width: 40%;
-}
-.right{
-    float: left;
-    width: 20%;
-    padding: 10px 15px ;
-    margin-top: 7px;
-
-}
-@media only screen and (max-width:800px){
-    /* dành cho máy tính bảng*/
-    .main{
-        width: 50%;
-        padding: 0%;
-    }
-    .right{
-        width: 100%;
-    }
-    
-}
-@media only screen and(max-width:500px){
-    /* dành cho điện thoại */
-    .main{
-        width: 80%;
-    }
-    .right{
-        float: left;
-        width: 100%;
-
-    }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
 </head>
 <body>
-    <h1 class="main" style="color: blue;"><ins>Khoa CNTT HUMG</ins></h1>
-    <h3 class="main" style="text-align: center;">Departments</h3>
-    <div class="main">
-        <table>
-            <tr>
-                <th>STT</th>
-                <th>Departments</th>
-                <th>Address</th>
-                <th>Phone</th>
-                <th>Email</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td style="color: blue;"><ins>Tin học trắc địa</ins></td>
-                <td>709 nhà 12 tâng </td>
-                <td>0999999999</td>
-                <td>tinhoctracdia@humg.edu.vn</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td style="color: blue;"><ins>CNPM</ins></td>
-                <td>709 nhà 12 tâng </td>
-                <td>0999999999</td>
-                <td>cnpm@humg.edu.vn</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td style="color: blue;"><ins>Tin học kinh tế</ins></td>
-                <td>709 nhà 12 tâng </td>
-                <td>0999999999</td>
-                <td>thkt@humg.edu.vn</td>
-            </tr>
-        </table>
+    <div class="form-group">
+        <label for="chuyen_nganh"><h2>Lựa chọn chuyên ngành</h2></label><br>
+        <select name="chuyen_nganh" id="chuyen_nganh">
+        <option value="1">Địa tin học</option>
+        <option value="2">Công nghệ phần mềm</option>
+        <option value="3">Hệ thống thông tin</option>
+        <option value="4">Mạng máy tính</option>
+        <option value="5">Tin học kinh tế</option>
+        </select>
     </div>
-    <div class="main">
-        <h3>Chuyên ngành trong khoa </h3>
-        <ucul>
-            <li>CNTT địa học</li>
-            <li>CNPM</li>
-            <li>THKT</li>
-            <li>KHMT</li>
-            <li>HTTT</li>
-        </ul>
+    <div class="form-group">
+        <label for="mon_hoc"><h2>Đăng ký môn học</h2></label>
+        <select name="mon_hoc" id="mon_hoc">
+            <option value="1">PYTHON</option>
+            <option value="2">Cơ sở lập trình</option>
+            <option value="3">Phát triển ứng dụng web</option>
+            <option value="4">Tiếng anh </option>
+            <option value="5">Triết học Mac</option>
+        </select>
     </div>
-    <div class="right">
-        <h3>Vũ Tuấn Anh 2121050396</h3>
-        <p><img src="https://i.pinimg.com/750x/39/e0/6d/39e06d9a03e86f72016d1abb63846fa2.jpg" width="100%" height="100%" alt="nikke"></p>
-    </div>
+    <input type="submit" value="Submit"> 
+
+    
 </body>
 </html>
