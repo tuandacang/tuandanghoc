@@ -2,19 +2,23 @@
 <html>
     <head>
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                document.querySelector('#is').onsubmit = function() {
-                    const name = document.querySelector('#name').value;
-                    alert(`Hello ${name}!`);
-                };
-            });
+            function sum(){
+                let a = Number(document.getElementById("numa").value);
+                let b = Number(document.getElementById("numb").value);
+
+                let sum = parseInt(a) + b;
+
+                document.getElementById('result').innerHTML = sum;
+            }
         </script>
-        <title>My Website</title>
     </head>
     <body>
-        <form id="is">
-            <input type="text" id="name" autofocus placeholder="Name">
-            <input type="submit">
-         </form>
+        <h1>Tính tổng</h1>
+        <label for="numa">Nhập số a:</label>
+        <input type="text" id="numa" value=""/><br>
+        <label for="numb">Nhập số b:</label>
+        <input type="text" id="numb" value=""/><br>
+        <span id="result">Tổng a và b là:</span><br>
+        <input type="button" onclick="sum()" value="Tính tổng"/>
     </body>
-</html> 
+</html>
