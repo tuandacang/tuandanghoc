@@ -1,24 +1,124 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <style>
+            span{
+                display: block;
+                position: absolute;
+                top: 1px;
+                right: 0;
+                width: 40px;
+                height: 16px;
+            }
+        </style>
         <script>
-            function sum(){
-                let a = Number(document.getElementById("numa").value);
-                let b = Number(document.getElementById("numb").value);
+            
 
-                let sum = parseInt(a) + b;
+            function kiemtra() {
+                var loi = "";
+                //Ktra họ tên
+                var hoten= document.getElementById("hoten");
+                if(hoten.value==""){
+                    hoten.className="loi"
+                    loi += "Họ tên không được bỏ trống<br>";
+                }
+                //Ktra tên đăng nhập 
+                var tendangnhap= document.getElementById("tendangnhap");
+                if(tendangnhap.value==""){
+                    tendangnhap.className="loi";
+                    loi+= "Tên đang nhập không được bỏ trống<br>";
+                }
+                else if(tendangnhap.value.length<8){
+                    tendangnhap.className="loi";
+                    loi += "Tên đăng nhập phải có 8 kí tự trở lên<br>";
+                }
+                else tendangnhap.className="txt";
 
-                document.getElementById('result').innerHTML = sum;
+                //Ktra password
+                var password = document.getElementById("password");
+                var confirm_password = document.getElementById("confirm_password");
+                if(password.value==""){
+                    password.className="loi";
+                    loi+= "Nhập password<br>"
+                }
+                else if(password.value != confirm_password.value){
+                    confirm_password.className="loi";
+                    loi += "Password không khớp<br>"
+                }
+                else confirm_password.className="password";
+                //Ktra email
+                var email=document.getElementById("email");
+                if(email.vaue==""){
+                    email.className="loi";
+                    loi += "Email không được bỏ trống<br>";
+                }
+              
+                //ktra số điện thoại
+                var sdt=document.getElementById("sdt");
+                if(sdt.value==""){
+                    sdt.className="loi";
+                    loi += "Số điện thoại không được bỏ trống<br>";
+                }
+                
+
+                if(loi!=""){
+                    document.getElementById('baoloi').innerHTML=loi;
+                    return false;
+                }
             }
         </script>
     </head>
     <body>
-        <h1>Tính tổng</h1>
-        <label for="numa">Nhập số a:</label>
-        <input type="text" id="numa" value=""/><br>
-        <label for="numb">Nhập số b:</label>
-        <input type="text" id="numb" value=""/><br>
-        <span id="result">Tổng a và b là:</span><br>
-        <input type="button" onclick="sum()" value="Tính tổng"/>
+       <p>
+            <label>Họ tên (*)</label>
+            <input id="hoten" type="text" class="txt">
+       </p> 
+       <p>
+            <label>Tên đăng nhập(*)</label>
+            <input id="tendangnhap" type="text" class="txt">
+       </p> 
+       <p>
+        <label>Password</label>
+        <input type="password"  id="password" required>
+       </p> 
+       <p>
+        <label>Nhập lại password</label>
+        <input type="password"  id="confirm_password" required>
+       </p>
+       <p>
+            <label>Quốc tịch(*)</label>
+            <select id="quoctich" class="txt">
+                <option value="0">Chọn quốc tịch</option>
+                <option value="1">Việt Nam</option>
+                <option value="2">Thái Lan</option>
+                <option value="3">Hàn Quốc</option>
+                <option value="4">Nhật Bản</option>
+                <option value="5">Trung Quốc</option>
+            </select>
+       </p>
+       <p>
+            <label>Email(*)</label>
+            <input id="email" type="email" class="txt">
+       </p>
+       <p>
+            <label>Số điện thoại(*)</label>
+            <input id="sdt" type="" class="number">
+       </p>
+       <p>  
+            <label>Câu hỏi bí mật(*)</label>
+            <select id="cauhoi" class="txt">
+                <option value="1">Môn học yêu thích của bạn?</option>
+                <option value="2">CLB bóng đá mà bạn yêu thích?</option>
+                <option value="3">Bạn hay làm gì vào thời gian rảnh?</option>
+                <option value="4">Con vật mà bạn yêu thích?</option>
+                <option value="5">Trò chơi bạn yêu thích?</option>
+            </select>
+       </p>    
+       <p>
+        <label>Trả lời(*)</label>
+        <input id="traloi" type="traloi" class="txt">
+       </p>
+       <div id="baoloi"></div>
+       <button type="button" onclick="return kiemtra();" id="dangki">Đăng kí</button>
     </body>
 </html>
