@@ -3,26 +3,19 @@
 <head>
     <script>
         document.addEventListener('DOMContentLoaded' , function() {
-            // Change font color to red
-            document.querySelector('#red').onclick = function() {
-                document.querySelector('#hello').style.color = 'red';
-            };
-            // Change font color to blue
-            document.querySelector('#blue').onclick = function() {
-                document.querySelector('#hello').style.color = 'blue';
-            };
-            // Change font color to pink
-            document.querySelector('#pink').onclick = function() {
-                document.querySelector('#hello').style.color = 'pink';
-            };
+            document.querySelectorAll('.color-change').forEach(function(button) {
+                button.onclick = function() {
+                    document.querySelector('#hello').style.color = button.dataset.color;
+                };
+            });            
         });
     </script>
     <title>Document</title>
 </head>
 <body>
     <h1 id="hello">Hello 2Cuno</h1>
-    <button id="red">Red</button>
-    <button id="bule">Blue</button>
-    <button id="pink">Pink</button>
+    <button class="color-change" data-color="red">Red</button>
+    <button class="color-change" data-color="blue">Blue</button>
+    <button class="color-change" data-color="pink">Pink</button>
 </body>
 </html>
