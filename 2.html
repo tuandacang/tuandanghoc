@@ -4,22 +4,18 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-  $("p").on({
-    mouseenter: function(){
-      $(this).css("background-color", "lightgray");
-    },  
-    mouseleave: function(){
-      $(this).css("background-color", "red");
-    }, 
-    click: function(){
-      $(this).css("background-color", "pink");
-    }  
+  $("button").click(function(){
+    $("p").toggle();
   });
 });
 </script>
 </head>
 <body>
 
+<button>Toggle between hiding and showing the paragraphs</button>
+
+<p>Vũ Tuấn Anh - 2121050396</p>
 <p>Vũ Tuấn Anh - 2121050396</p>
 
 </body>
+</html>
