@@ -7,7 +7,10 @@
             document.querySelector('#sumbit').disabled = true;
             
             document.querySelector('#task').onkeyup = function() {
-                document.querySelector('#sumbit').disabled = false;
+                if (document.querySelectorAll('#task').value.length > 8)
+                    document.querySelector('#sumbit').disabled = false;
+                else
+                    document.querySelector('#submit').disabled = true;
             };
             document.querySelector('#new-task').onsumbit = function() {
 
