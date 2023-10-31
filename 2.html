@@ -2,39 +2,18 @@
 <html lang="en">
 <head>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-        
-            document.querySelector('#sumbit').disabled = true;
-            
-            document.querySelector('#task').onkeyup = function() {
-                if (document.querySelectorAll('#task').value.length > 8)
-                    document.querySelector('#sumbit').disabled = false;
-                else
-                    document.querySelector('#submit').disabled = true;
-            };
-            document.querySelector('#new-task').onsumbit = function() {
-
-                const li = document.createElement('li');
-                li.innerHTML = document.querySelector('#task').value;
-
-                document.querySelector('#task').append(li);
-
-                document.querySelector('#task').value = '';
-                document,querySelector('#submit').disabled = true;
-
-                return false;
-            };
-        })
+        document.addEventListener('DOCContentLoaded', function() {
+            setInterval(count, 1000);
+        });
+        let counter = 0;
+        function count() {
+            coounter++;
+            document.querySelector('#counter').innerHTML = counter;
+        }
     </script>
     <title>Document</title>
 </head>
 <body>
-    <h1>Tasks</h1>
-    <ul id="tasks">
-    </ul>
-    <form id="new-task">
-        <input id="task" autocomplete="off" autofocus placeholder="New Task" type="text">
-        <input id="submit" type="submit">
-    </form>
+    <h1 id="counter">Tuan</h1>
 </body>
 </html>
