@@ -4,20 +4,22 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-  $("button").click(function(){
-    $("p").hide();
+  $("p").on({
+    mouseenter: function(){
+      $(this).css("background-color", "lightgray");
+    },  
+    mouseleave: function(){
+      $(this).css("background-color", "red");
+    }, 
+    click: function(){
+      $(this).css("background-color", "pink");
+    }  
   });
 });
 </script>
 </head>
 <body>
 
-<h2>Vũ Tuấn Anh</h2>
-
 <p>Vũ Tuấn Anh - 2121050396</p>
-<p>Vũ Tuấn Anh - 21210503596</p>
-
-<button>Click me to hide paragraphs</button>
 
 </body>
-</html>
