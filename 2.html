@@ -4,21 +4,21 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-  $("#btn1").click(function(){
-    alert("Text: " + $("#test").text());
-  });
-  $("#btn2").click(function(){
-    alert("HTML: " + $("#test").html());
+  $("button").click(function(){
+    $("#fb").attr({
+      "href" : "https://www.facebook.com/tuananh5523/",
+      "title" : "W3Schools jQuery Tutorial"
+    });
   });
 });
 </script>
 </head>
 <body>
 
-<p id="test">Vũ Tuấn Anh  <b> msv </b>2121050396 .</p>
+<p><a href="https://www.facebook.com/tuananh5523/" title="some title" id="fb">Tuan Anh</a></p>
 
-<button id="btn1">Show Text</button>
-<button id="btn2">Show HTML</button>
+<button>Vũ Tuấn Anh</button>
 
+<p>Vũ Tuấn Anh 21210503596</p>
 </body>
 </html>
