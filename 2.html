@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+.siblings * { 
+  display: block;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  padding: 5px;
+  margin: 15px;
+}
+</style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-  $("button").click(function(){
-    var txt = "";
-    txt += "Document width/height: " + $(document).width();
-    txt += "x" + $(document).height() + "\n";
-    txt += "Window width/height: " + $(window).width();
-    txt += "x" + $(window).height();
-    alert(txt);
-  });
+  $("h2").next().css({"color": "red", "border": "2px solid red"});
 });
 </script>
 </head>
-<body>
+<body class="siblings">
 
-<button>Vũ Tuấn Anh 2121050396</button>
+<div>div (parent)
+  <p>p</p>
+  <span>span</span>
+  <h2>Vũ Tuấn Anh 2121050396</h2>
+  <h3>Vũ Tuấn Anh 2121050396</h3>
+  <p>p</p>
+</div>
 
 </body>
 </html>
