@@ -5,22 +5,19 @@
 <script>
 $(document).ready(function(){
   $("button").click(function(){
-    $("p").css({"background-color": "yellow", "font-size": "200%"});
+    var txt = "";
+    txt += "Document width/height: " + $(document).width();
+    txt += "x" + $(document).height() + "\n";
+    txt += "Window width/height: " + $(window).width();
+    txt += "x" + $(window).height();
+    alert(txt);
   });
 });
 </script>
 </head>
 <body>
 
-<h2>This is a heading</h2>
-
-<p style="background-color:#d3529b">Vũ Tuấn Anh 2121050396</p>
-<p style="background-color:#418a41">Vũ Tuấn Anh 2121050396</p>
-<p style="background-color:#c0d95a">Vũ Tuấn Anh 2121050396</p>
-
-<p>Vũ Tuấn Anh 2121050396</p>
-
-<button>Set multiple styles for p</button>
+<button>Vũ Tuấn Anh 2121050396</button>
 
 </body>
 </html>
