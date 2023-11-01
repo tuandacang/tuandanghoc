@@ -3,22 +3,25 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
-function afterText() {
-  var txt1 = "<b> Vũ Tuấn Anh </b>";           // Create element with HTML
-  var txt2 = $("<i></i>").text(" msv ");  // Create with jQuery
-  var txt3 = document.createElement("b");   // Create with DOM
-  txt3.innerHTML = "2121050396";
-  $("img").after(txt1, txt2, txt3);    // Insert new elements after img
-}
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").empty();
+  });
+});
 </script>
 </head>
 <body>
 
-<img src="/images/w3jquery.gif" alt="jQuery" width="100" height="140">
+<div id="div1" style="height:100px;width:300px;border:1px solid black;background-color:pink;">
 
-<p>Click the button to insert text after the image.</p>
 
-<button onclick="afterText()">Insert after</button>
+<p>Vũ Tuấn Anh.</p>
+<p>2121050396.</p>
+
+</div>
+<br>
+
+<button>Empty the div element</button>
 
 </body>
 </html>
