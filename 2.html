@@ -5,24 +5,22 @@
 <script>
 $(document).ready(function(){
   $("button").click(function(){
-    $("h1, h2, p").removeClass("blue");
+    $("p").css({"background-color": "yellow", "font-size": "200%"});
   });
 });
 </script>
-<style>
-.blue {
-  color: blue;
-}
-</style>
 </head>
 <body>
 
-<h1 class="blue">Vũ Tuấn Anh</h1>
-<h2 class="blue">2121050396</h2>
+<h2>This is a heading</h2>
 
+<p style="background-color:#d3529b">Vũ Tuấn Anh 2121050396</p>
+<p style="background-color:#418a41">Vũ Tuấn Anh 2121050396</p>
+<p style="background-color:#c0d95a">Vũ Tuấn Anh 2121050396</p>
 
+<p>Vũ Tuấn Anh 2121050396</p>
 
-<button>Remove class from elements</button>
+<button>Set multiple styles for p</button>
 
 </body>
 </html>
