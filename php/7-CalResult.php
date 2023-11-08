@@ -6,16 +6,10 @@
 </head>
 <body>
    <?php
-    $number1 = $_GET["number1"];
-    $number2 = $_GET["number2"];
+   $text = $_GET['vanban'];
+   $kytu = $_GET['kytu'];
 
-    if($number1 > $number2){
-    $solonhon = $number1;
-    }
-    else { 
-    $solohon = $number2;
-    }
-    echo ' Số lớn hơn là: '.$solonhon;
+    echo substr_count($text, $kytu);
     ?>
 </body>
 </html>
