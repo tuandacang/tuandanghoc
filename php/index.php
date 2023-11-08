@@ -6,10 +6,10 @@
 </head>
 <body>
     <form action="7-Calresult.php" method="get">
-        <p?>First Number: </p>
-        <input type="number" name="firstNumber"><br>
-        <p>Second Number: </p>
-        <input type="number" name="secondNumber"><br>
+        <p?>Number 1</p>
+        <input type="number" name="number1" ><br>
+        <p>Number 2: </p>
+        <input type="number" name="number2"><br>
         <p></p>
         <input type="submit" value="Add">
     </form>

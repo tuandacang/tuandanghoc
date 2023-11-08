@@ -5,10 +5,17 @@
     <title></title>
 </head>
 <body>
-   Result:
    <?php
-        $result = $_GET["firstNumber"] + $_GET["secondNumber"];
-        echo $result
-        ?>
+    $number1 = $_GET["number1"];
+    $number2 = $_GET["number2"];
+
+    if($number1 > $number2){
+    $solonhon = $number1;
+    }
+    else { 
+    $solohon = $number2;
+    }
+    echo ' Số lớn hơn là: '.$solonhon;
+    ?>
 </body>
 </html>
