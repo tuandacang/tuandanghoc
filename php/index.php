@@ -1,8 +1,11 @@
-<?php
-$longAccount = 10.000.000;
-echo " So tien trong tai khoan Long: $longAccount";
-$HUMGPay = 10.000.000;
-echo "HUMG chuyen tien: $HUMGPay";
-$longAccount = $longAccount + $HUMGPay;
-echo "So tien trong tai khoan Long: $longAccount";
-?>  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    Welcome <?php  echo $_GET["name"]; ?><br>
+    Your email address is: <?php echo $_GET["email"]; ?>
+</body>
+</html>
