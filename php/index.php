@@ -5,15 +5,24 @@
     <title></title>
 </head>
 <body>
-    <form action="7-Calresult.php" method="get">
-        <p>a</p>
-        <input type="number" name="a" ><br>
-        <p>b</p>
-        <input type="number" name="b"><br>
-        <p>c</p>
-        <input type="number" name="c"><br>
-        <p></p>
-        <input type="submit" value="Add">
-    </form>
+<form action="7-Calresult.php" method="get">
+    <div class="tad-v-1">
+        <div class="tad-container">
+            <h2>Đăng ký thành viên</h2>
+        </div>
+            <label for=""><b>First Name</b></label>
+            <input type="text" name="Fname" ><br>
+            <p>
+            <label for=""><b>Last Name</b></label>
+            <input type="text" name="Lname"><br>
+            <p>
+            <label for=""><b>Email</b></label>
+            <input type="text" name="e-mail"><br>
+            <p>
+            <label for=""><b>Phone</b></label>
+            <input type="number" name="phone"><br>
+            <p>
+            <input type="submit" value="SUBMIT">
+        </form>
 </body>
 </html>
