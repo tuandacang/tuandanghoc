@@ -6,18 +6,27 @@
 </head>
    <body> 
       <?php
+         $USD = 22300;
+         $EUR = 27300;
+         $AUD = 17000;
+         $JPY = 120;
+         $amount = $_GET['response'];
+         echo " $amount USD is equal ";
+         if ($_GET["response"] == "USD")
+         {
+            echo $amount * $USD;
+         }
+         elseif ($_GET["response"] == "EUR") { 
+            echo $amount * $EUR;
+         }
+         elseif ($_GET["response"] == "AUD") {
+            echo $amount * $AUD;
+         }
+         elseif ($_GET["response"] == "JPY") {
+            echo $amount * $JPY;
+         }
 
-      echo "THE GAME";
-      if ($_GET["response"] == "yes")
-      {
-         echo"HAS BEEN QUITED";
-      }
-      if ($_GET["response"] == "no")
-      {
-         echo"WILL BE CONTINUED IN 3 SECONDS";
-      }
-
-         echo "<br>AFTER IF STATEMENT";
+         echo "VND";
       ?>
    </body>
 </html>
