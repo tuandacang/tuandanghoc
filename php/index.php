@@ -6,12 +6,12 @@
     <title></title>
 </head>
    <body> 
-        <form action="5-formGet.php" method="get">
-           <p>Name: </p>
-           <input type="text" name="name"><br>
-           <p>E-mail: </p>
-           <input type="text" name="email"><br>
-           <p></p>
-           <input type="submit">
+       <from action="7-CalResult.php" method="get">
+          <p>First Number: </p>
+          <input type="number" name="firstNumber"><br>
+          <p>First Number: </p>
+          <input type="number" name="secondNumber"><br>
+          <p></p>
+          <input type="submit"value="Add">
    </body>
 </html>
