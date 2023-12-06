@@ -1,0 +1,18 @@
+table {
+   border: 2px solid blueviolet;
+   border-collapse: collapse;
+}
+th, td {
+   background-color: #64ede4;
+   color: white;
+}
+.odd {
+   background-color: lightpink;
+}
+.even {
+   background-color: lightcyan;
+}
+tr:hover {
+   background: pink;
+   color: white;
+}
